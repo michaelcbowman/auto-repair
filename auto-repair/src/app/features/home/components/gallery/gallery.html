@@ -1,0 +1,10 @@
+<section class="max-w-6xl h-16 mx-auto py-12">
+    <swiper-container #swiper init="false">
+        @for (image of images; track image) {
+        <swiper-slide>
+            <img [src]="image" class="w-full h-full object-cover rounded-lg">
+        </swiper-slide>
+        }
+
+    </swiper-container>
+</section>

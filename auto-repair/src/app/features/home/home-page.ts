@@ -1,9 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Gallery } from './components/gallery/gallery';
 
 @Component({
   selector: 'app-home-page',
-  imports: [],
+  standalone: true,
+  imports: [Gallery],
   templateUrl: './home-page.html',
-  styleUrl: './home-page.css',
+  styleUrls: ['./home-page.css'],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomePage {}
