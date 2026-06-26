@@ -1,12 +1,11 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import 'swiper/css';
-import 'swiper/css/navigation';
+import { AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, ViewChild } from '@angular/core';
+import { SwiperContainer } from 'swiper/element';
 
 @Component({
   selector: 'app-gallery',
-  imports: [],
   templateUrl: './gallery.html',
   styleUrl: './gallery.css',
+  standalone: true,
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class Gallery {
@@ -23,17 +22,4 @@ export class Gallery {
     'assets/1000002089.jpeg',
     'assets/1000002092.jpeg',
   ];
-
-  swiperConfig = {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    navigation: true,
-    speed: 500,
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    }
-  }
 }
-
